@@ -1,0 +1,42 @@
+//This java program shows the string interleaved or not.
+
+public class Main{ 
+    static boolean isInterleaved (String A, String B, String C)  
+    { 
+        int i = 0, j = 0, k = 0; 
+          
+        // Iterate through all characters of C.  
+        while (k != C.length())  
+        {  
+            
+            if (i<A.length()&&A.charAt(i) == C.charAt(k))  
+                i++;  
+      
+           
+            else if (j<B.length()&&B.charAt(j) == C.charAt(k))  
+                j++;  
+      
+                       else
+                return false;  
+              
+            // Move C to next for next iteration  
+            k++;  
+        }  
+       
+        if (i < A.length() || j < B.length())  
+            return false;  
+      
+        return true;  
+    }  
+  
+    public static void main(String []args){ 
+          
+        String A = "str1 str2";  
+        String B = "str3 str4";  
+        String C = "str1 str2 str3 str4";  
+        if (isInterleaved(A, B, C) == true)  
+            System.out.printf("%s is interleaved of %s and %s", C, A, B);  
+        else
+            System.out.printf("%s is not interleaved of %s and %s", C, A, B); 
+    } 
+}
