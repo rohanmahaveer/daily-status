@@ -1,0 +1,12 @@
+//Python program to add two string in sequence
+
+
+
+s1=input("enter 1st string\n")
+s2=input("enter 2nd string\n")
+a=len(s1)
+b=len(s2)
+if(a>b):
+  print(s2+s1+s2)
+else:
+  print(s1+s2+s1)
